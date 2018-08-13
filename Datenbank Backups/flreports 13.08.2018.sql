@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 29. Jun 2018 um 10:55
+-- Erstellungszeit: 13. Aug 2018 um 10:26
 -- Server Version: 5.5.58-MariaDB-1ubuntu0.14.04.1
 -- PHP-Version: 5.6.33-3+ubuntu14.04.1+deb.sury.org+1
 
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `grades` (
   `grade` varchar(10) NOT NULL,
   `date` varchar(30) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Daten für Tabelle `grades`
@@ -240,7 +240,13 @@ INSERT INTO `grades` (`ID`, `userID`, `lesson`, `content`, `grade`, `date`) VALU
 (16, 1, 'SuK', 'Gesamtnote Lehrjahr 1.', '1', '1528689600'),
 (17, 1, 'FE-M', 'Gesamtnote Lehrjahr 1.', '1-', '1528689600'),
 (18, 1, 'SuK', 'Teamregeln definiert', '1-', '1529899200'),
-(19, 1, 'SuG', 'Gesamtnote', '1', '1530244800');
+(19, 1, 'SuG', 'Gesamtnote', '1', '1530244800'),
+(20, 1, 'IT-WS', 'Gesamtnote Lernfeld ', '1-', '1530504000'),
+(21, 1, 'IT-WS', 'Gesamtnote Lernfeld ', '2', '1530504000'),
+(22, 1, 'WuG', 'Gesamtnote ', '1-', '1530504000'),
+(23, 1, 'AE-M', 'Gesamtnote Lernfeld', '1', '1530504000'),
+(24, 1, 'OGP', 'Gesamtnote Lernfeld ', '2', '1530504000'),
+(25, 1, 'OGP', 'Gesamtnote Lernfeld (Auszubügeln)', '3+', '1530504000');
 
 -- --------------------------------------------------------
 
@@ -258,7 +264,7 @@ CREATE TABLE IF NOT EXISTS `reports` (
   `end` varchar(10) NOT NULL,
   `deleted` int(1) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=342 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=364 ;
 
 --
 -- Daten für Tabelle `reports`
@@ -485,7 +491,7 @@ INSERT INTO `reports` (`ID`, `userID`, `date`, `cw`, `location`, `begin`, `end`,
 (306, 1, '1527085399', '21', 'company', '7.40', '16.40', 0),
 (307, 1, '1527173343', '21', 'company', '7.50', '16.50', 0),
 (308, 1, '1527260008', '21', 'company', '8.00', '17.00', 0),
-(309, 1, '1527518666', '22', 'company', '7.45', '7.45', 0),
+(309, 1, '1527518666', '22', 'company', '7.45', '16.45', 0),
 (310, 1, '1527566400', '22', 'company', '8.00', '18.00', 0),
 (311, 1, '1527689938', '22', 'company', '7.30', '16.30', 0),
 (312, 1, '1527777426', '22', 'company', '7.45', '16.45', 0),
@@ -517,7 +523,29 @@ INSERT INTO `reports` (`ID`, `userID`, `date`, `cw`, `location`, `begin`, `end`,
 (338, 1, '1531368000', '28', 'vacation', '0', '0', 0),
 (339, 1, '1531454400', '28', 'vacation', '0', '0', 0),
 (340, 1, '1531713600', '29', 'vacation', '0', '0', 0),
-(341, 1, '1530275647', '26', 'school', '9.30', '13.45', 0);
+(341, 1, '1530275647', '26', 'school', '9.30', '13.45', 0),
+(342, 1, '1530534641', '27', 'school', '9.30', '14.30', 0),
+(343, 1, '1530615526', '27', 'school', '7.45', '11.00', 0),
+(344, 1, '1530697718', '27', 'school', '9.30', '10.30', 0),
+(345, 1, '1531836997', '29', 'company', '7.30', '16.30', 0),
+(346, 1, '1531924122', '29', 'company', '8.00', '17.00', 0),
+(347, 1, '1532010230', '29', 'company', '7.45', '16.45', 0),
+(348, 1, '1532096871', '29', 'company', '7.50', '16.50', 0),
+(349, 1, '1532318400', '30', 'company', '9.00', '13.30', 0),
+(350, 1, '1532404800', '30', 'vacation', '0', '0', 0),
+(351, 1, '1532528631', '30', 'company', '7.40', '16.40', 0),
+(352, 1, '1532614679', '30', 'company', '8.40', '16.40', 0),
+(353, 1, '1532701549', '30', 'company', '7.45', '16.45', 0),
+(354, 1, '1532923200', '31', 'company', '7.50', '16.50', 0),
+(355, 1, '1533047287', '31', 'company', '7.45', '16.45', 0),
+(356, 1, '1533134242', '31', 'company', '8.00', '17.00', 0),
+(357, 1, '1533220184', '31', 'company', '8.00', '17.00', 0),
+(358, 1, '1533307133', '31', 'company', '7.45', '16.45', 0),
+(359, 1, '1533567874', '32', 'company', '8.10', '17.10', 0),
+(360, 1, '1533653185', '32', 'company', '8.00', '17.00', 0),
+(361, 1, '1533745045', '32', 'company', '9.00', '18.00', 0),
+(362, 1, '1533824709', '32', 'company', '7.40', '16.40', 0),
+(363, 1, '1533912919', '32', 'company', '8.00', '17.00', 0);
 
 -- --------------------------------------------------------
 
@@ -531,7 +559,7 @@ CREATE TABLE IF NOT EXISTS `report_actions` (
   `action` varchar(1000) NOT NULL,
   `time` float NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1100 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1240 ;
 
 --
 -- Daten für Tabelle `report_actions`
@@ -1501,7 +1529,147 @@ INSERT INTO `report_actions` (`ID`, `reportID`, `action`, `time`) VALUES
 (1096, 341, 'Projekt_02: Feedbackrunde, Tipps und Tops besprochen im Plenum. ', 1.5),
 (1097, 341, 'GuS: Vortrag angehört über gesunde Ernährung ', 0.5),
 (1098, 341, 'GuS: Handball und Basketball gespielt ', 2),
-(1099, 341, 'GuS: Notenbesprechung (Gesamtnote: 1)', 0.25);
+(1099, 341, 'GuS: Notenbesprechung (Gesamtnote: 1)', 0.25),
+(1100, 342, 'IT-WS: Noten besprochen. ', 0.25),
+(1101, 342, 'IT-WS: VLSM, VLAN und DHCP Übungen, Packettracer konfigurieren', 2.5),
+(1102, 342, 'OuG&AE-M: Noten besprochen.', 0.25),
+(1103, 342, 'FE-M: Überblick über neues Thema verschafft. Künstliche Intelligenz', 1.5),
+(1104, 342, 'FE-M: Sprachlicher Überblick in andere Fremdsprachen.', 0.5),
+(1105, 343, 'IT-WS: Präsentation gehalten über STP, Live Demo von STP im PacketTracer gezeigt ', 1),
+(1106, 343, 'IT-WS: Übungsaufgaben zu VLSM, VLAN, STP bearbeitet ', 1.5),
+(1107, 343, 'IT-WS: Vortrag über VTP (VLAN Trunking Protokoll) angehört ', 0.5),
+(1108, 343, 'Zwischenzeugnis zur Ansicht und ggf. Korrektur ausgehändigt bekommen. ', 0.25),
+(1109, 344, 'Raum 215 Abbau, PCs, Monitore und Kabel beseitigt zwecks Aufrüstung des Raumes', 0.75),
+(1110, 344, 'Zeugnisausgabe für das erste Lehrjahr (Kopie zu unterschreiben)', 0.25),
+(1111, 345, 'Support: Remotedesktopverbindung gescheitert wegen fälschlicher Vergabe von APIPA Adressen.', 1.5),
+(1112, 345, 'Support: Tunnel auf dem Berliner Gateway überprüft', 1),
+(1113, 345, 'Schrank aufgestellt bei den Druckern', 0.5),
+(1114, 345, 'Support: Langsame Consolenverbindung im WIFUND überprüft und überflüssige Switche über den APC ausgemacht', 1.25),
+(1115, 345, 'Kleinere Aufräumarbeiten in der Technik.', 3),
+(1116, 345, 'Urlaubsantrag verfasst für den 24.07.', 0.75),
+(1117, 346, 'Support: X2go und Guacamole unterschiede geklärt und weitergegeben an Trainer', 1),
+(1118, 346, 'Support: RL3 Client VM reverten kennengelernt und dem Support erklärt wie es geht', 2),
+(1119, 346, 'Reset: BGP reset gemacht, Script ausführen auf dehamubuntu', 0.5),
+(1120, 346, 'Praktikanten erklärt wie man Festplatten klont', 1),
+(1121, 346, 'Owncloud aktualisiert und angepasst, Plugins installiert und Sicherung erstellt', 3),
+(1122, 346, 'Kisten ausgeladen und den Wagen geparkt', 0.5),
+(1123, 347, 'Reset: FPIMPADM 2.0, NetApp Filer zurücksetzen, Nexus resetten, Fabric Interconnects zurücksetzen, Service Profile Löschen.', 1.75),
+(1124, 347, 'Support: VM gefreezed, neugestartet', 0.5),
+(1125, 347, 'Support: Deutsches Tastaturlayout deinstalliert auf VMs', 1),
+(1126, 347, 'Support: Cisco Datacenter Fragen beantwortet', 0.5),
+(1127, 347, 'Support: Coreswitch Flashspeicher Probleme troubleshooten', 1.5),
+(1128, 347, 'Support: RL3 Client Probleme troubleshooten. Reinstall', 2.5),
+(1129, 347, 'Support: SISE Labguide rausgesucht', 0.25),
+(1130, 348, 'Reset: MPLST, Script starten und Manuel fehler korrigieren, Terminal Server reloaden', 1.75),
+(1131, 348, 'Support: Access Daten an Trainer versendet', 0.5),
+(1132, 348, 'Support: gefreezte VM neugestartet', 0.5),
+(1133, 348, 'Raumvorbereitung, Rechner imagen, Räume tauschen Rechner mit RAM aufrüsten, Hardware verschieben', 2.75),
+(1134, 348, 'Browserplugins umgecodet mit JS und CSS', 1.5),
+(1135, 348, 'Support: Wegen Problemen mit dem RL3 Client auf MAC getroubleshootet', 1),
+(1136, 349, 'Thin Clients Samsung SyncMaster NC190 Spezifikationen herausgefunden', 1),
+(1137, 349, 'Thin Clients aufgebaut, angeschlossen und Funktionalität überprüft', 2),
+(1138, 349, 'Verkaufsfotos von Thin Clients gemacht', 0.5),
+(1139, 349, 'Berufsschulaufgabe über Python angefangen, Einstieg in die Sprache, Editor runterladen', 1),
+(1140, 350, 'Urlaub', 0),
+(1141, 351, 'Laptops ausschlachten auf der suche nach 2GB RAM, R61 Laptops', 3.5),
+(1142, 351, 'Festplatte und RAM testen für WIDESIGN Laptop wegen Bluescreens', 2.75),
+(1143, 351, 'DCE Kabel verpackt gewogen und den Versandpreis bei DHL herausgefunden', 1),
+(1144, 351, 'Redhat Kiosk abbauen und nach Rom verlegen, aufbauen in Betrieb nehmen.', 0.5),
+(1145, 351, 'Küchendienst, Geschirrspüler aus und einräumen, Müll rausbringen', 0.25),
+(1146, 352, 'Wegen Laptops nachgefragt in München', 0.5),
+(1147, 352, 'UCS Server PCI 10G Karten ausgebaut und fertig gemacht zum versenden ', 0.5),
+(1148, 352, 'Telefonbenutzerprofil Problem entgegen genommen und weitergeleitet ', 0.5),
+(1149, 352, 'Webdesign am Berichtsheftsystem verändert, Kalenderwochen Bug gefixt (HTML, CSS, PHP) ', 1.5),
+(1150, 352, 'Hyper-V VM erstellt, konfiguriert und Software installiert. (Office, Sharepoint, Silverlight) Domain hinzugefügt ', 1.5),
+(1151, 352, 'Berichtsheft in Excel importiert für das erste Lehrjahr ', 1.25),
+(1152, 352, 'Kaffee Lieferung reingetragen ', 0.25),
+(1153, 352, 'Swapfile auf einem WIDESIGN Laptop eingerichtet ', 0.5),
+(1154, 352, 'Technik aufgeräumt, Hardware und Werkzeug wegsortiert ', 0.75),
+(1155, 352, 'Küchendienst, Geschirrspülmaschine ein und ausräumen, Müll raus bringen ', 0.75),
+(1156, 353, 'UCS Server verpackt und mit GO! nach FFM versendet.', 1.5),
+(1157, 353, 'Wegen WIDESIGN Laptops mit München telefoniert', 1),
+(1158, 353, 'Raumvorbereitung, WIDESIGN Equipment ins Lager räumen, Rechner Imagen', 2.75),
+(1159, 353, 'Defekte Steckdosenleiste repariert in Oslo', 0.5),
+(1160, 353, 'Küchendienst, Geschirrspüler aus und einräumen, Müll rausbringen', 1),
+(1161, 353, 'SUSE Image gesucht und Organisatorisches geklärt', 1.25),
+(1162, 354, 'Support: CICD Labguide an Trainer versendet', 0.5),
+(1163, 354, 'Support: Fehlerhaften Default Gateway auf Windows VM angepasst und im Switch korrigiert', 2),
+(1164, 354, 'Support: VM Prime version 2.2 auf version 3.1 upgrade', 0.5),
+(1165, 354, 'Telefon Rufumleitungen erklärt und das Self Care Portal erklärt (UCM)', 1),
+(1166, 354, 'Beamer Probleme in München kommuniziert', 0.5),
+(1167, 354, 'Mit FAE Dosen beschäftigt und ISP Infrastruktur, Anschlussart, Verdrahtung, Aufbau', 1.5),
+(1168, 354, 'Reset: SANIMP Reset fertiggestellt, ', 0.5),
+(1169, 354, 'Reset: WDBWL Reset fertiggestellt', 0.5),
+(1170, 354, 'Über CIMP IP die ESX gestartet und VMs reverted', 1),
+(1171, 355, 'Support: Beamer in Zürich Troubleshooten, Ersatzbeamer aufgebaut und angeschlossen', 0.5),
+(1172, 355, 'Support: SNMP commands angeschaut, groups, traps, server, user ', 1.25),
+(1173, 355, 'Support: SSH commands auf Cisco Router angeschaut', 0.75),
+(1174, 355, 'Server für Berlin eingeladen in einen Mietwagen', 0.5),
+(1175, 355, 'Kayako Template Design ausprobiert, HTML, CSS, JS', 2),
+(1176, 355, 'Verschlüsselungswebseite designen mit CSS', 1.25),
+(1177, 355, 'Support: Cisco Prime version 3.2 VM angeschaltet', 0.5),
+(1178, 355, 'Support: mit CPPR, ASA und Policys beschäftigt', 1),
+(1179, 355, 'Support: SENSS Labguide verschickt', 0.25),
+(1180, 356, 'Support: Troubleshoot wegen defekten Bladeserver, LUNs löschen und neu installieren auf anderem Server', 1.5),
+(1181, 356, 'Support: Cisco FirePower Policies bearbeitet, WebApplication filter funktionieren nicht, manuell URL geblockt', 2.5),
+(1182, 356, 'Git installiert und den Umgang gelernt, Workflow, Befehle, neues repository erstellt', 4),
+(1183, 357, 'Support: UCS Lab Core Router Interfaces auf no shutdown gesetzt, weil das Lab keine Konnektivität hatte', 1),
+(1184, 357, 'Support: User Passwords geändert wegen falscher Passwörter', 1),
+(1185, 357, 'Github verbunden mit repository auf meinem Server, committed, gepusht', 2),
+(1186, 357, 'Owncloud geupdated, Apps über MySQL disabled und Update Fehler behoben, anschließend neu eingerichtet', 1.5),
+(1187, 357, 'Berichtsheft für Juli 2018 gepflegt', 0.5),
+(1188, 357, 'Support: Nexus N5K Password Recovery mehrfach durchgeführt, wegen Login Bug. Platt gemacht und resettet.', 1),
+(1189, 357, 'Beamer in Zürich überprüft wegen Wackelkontakt.', 0.5),
+(1190, 357, 'IT-ClearUpService gemacht, IT aufgeräumt, Sachen wegsortiert', 0.5),
+(1191, 358, 'Support: ASA Version nachgeguckt (9.1.4)', 0.25),
+(1192, 358, 'Support: FireAMP Account Credentials verschickt an Trainer', 0.25),
+(1193, 358, 'Reverse Proxy mit Basic Authentification eingerichtet auf Ubuntu Server', 1),
+(1194, 358, 'Cloud Commander auf Ubuntu Server installiert', 2.25),
+(1195, 358, 'ownCloud theme erstellt und zum Laufen gebracht', 1.5),
+(1196, 358, 'Mit iptables beschäftigt unter Ubuntu Server', 1),
+(1197, 358, 'Ubuntu Server, Zeitzone einstellen und mit NTP-Server beschäftigt', 0.75),
+(1198, 358, 'Neue Sub-Domain bei Apache2 eingerichtet', 0.5),
+(1199, 358, 'Beamer in Zürich getestet mit anderer Hardware und Kabel', 0.5),
+(1200, 359, 'Technik aufgeräumt, Hardware wegsortiert, Allgemeine Ordnung Wiederherstellen', 1),
+(1201, 359, 'Über Docker Informationen gesammelt, Funktionsweise und Anwendungsgebiet', 1),
+(1202, 359, 'Apache2 Server auf Raspberry Pi per remote konfiguriert', 0.75),
+(1203, 359, 'Linux, mit symbolischen Link auseinandergesetzt', 0.5),
+(1204, 359, 'Linux, mit Benutzerrechten (chmod) auseinandergesetzt', 0.5),
+(1205, 359, 'Anydesk installiert und troubleshooten wegen Connection Problemen', 1.25),
+(1206, 359, 'LTE GigaCubes bereitgestellt für den Einsatz', 0.75),
+(1207, 359, 'USB-Headsets und USB-Kameras für einen Kurs bereitgestellt', 0.5),
+(1208, 359, 'Ersatz Beamer in Zürich bereitgestellt, weil der andere geflackert hat.', 0.5),
+(1209, 359, 'Mit PowerShell Script befasst, dass XML Daten umsortiert', 0.75),
+(1210, 359, 'Verstopfte Toilette versucht freizumachen', 0.5),
+(1211, 360, 'Solaris Kurs Rechner Imagen, VirtualBox manuell nachinstallieren', 1.5),
+(1212, 360, 'VirtualBox 64bit Problem behoben indem ich Hyper-V deaktiviert habe', 1),
+(1213, 360, 'Druckertoner für HP LaserJet Enterprise m607, Bestellung in Auftrag gegeben', 0.5),
+(1214, 360, 'Ventilatoren ins Trainingscenter tragen', 0.25),
+(1215, 360, 'Apache2 SSL, Virtualhost Konfiguration überarbeitet, optimiert, berichtigt', 2.25),
+(1216, 360, 'Support Schichten Quartal 4 geplant', 1),
+(1217, 360, 'GigaCube aufgebaut und den Umgang erklärt', 0.5),
+(1218, 360, 'Mit Chrome Apache2 BasicAuth Bug beschäftigt', 0.5),
+(1219, 360, 'Hinweisschilder für die Toiletten ausgedruckt, laminiert und angebracht', 0.5),
+(1220, 361, 'Tisch in Prag repariert', 0.5),
+(1221, 361, 'Equipment für Onsite Sendung erfasst mit Hersteller, Typ und Seriennummer', 2),
+(1222, 361, 'GO! Versand beauftragt, Laptopkisten, Beamer und LTE Router', 0.5),
+(1223, 361, 'Confluence Artikel erstellt zum Thema Paketversand mit DHL', 2),
+(1224, 361, 'HP LaserJet Enterprise m607 Tonerkartuschen ausgewechselt', 0.5),
+(1225, 361, 'Meeting über unsere Wireless Labs, bezüglich Reset und Support Eigenheiten', 0.5),
+(1226, 361, 'Input bekommen zum Thema Voice Setup, VLAN, DHCP, TFTP, Callmanager, Publisher, Subscriber', 0.5),
+(1227, 361, 'Laptops imagen und Softwarescript anmachen.', 1),
+(1228, 361, 'Hinweis-Schild angefertigt für die Toilette', 0.5),
+(1229, 362, 'Vorhängeschlösser an Kisten angebracht', 0.5),
+(1230, 362, 'Raumvorbereitung, Rechner und Laptops Imagen, Rechner aufbauen', 6.5),
+(1231, 362, 'Beamer Video Adapter Troubleshooten', 0.5),
+(1232, 362, 'Toner Kartusche am Drucker ausgetauscht (MFP 3115cn)', 0.5),
+(1233, 363, 'Raumvorbereitung, Rechner Imagen, Software einspielen, Switche und ASA aufbauen für ethical Hacking', 4.75),
+(1234, 363, 'Stühle im Trainingscenter zählen und Stühle austauschen gegen neue', 1),
+(1235, 363, 'Headset nach Stuttgart verschickt mit GO!', 0.5),
+(1236, 363, 'Router 4331 nach Münster verschickt mit GO!', 0.5),
+(1237, 363, 'Telefonsupport wegen Lab Extension gemacht', 0.5),
+(1238, 363, 'Ethical Hacking Rechner vorbereiten mit IP Setup und Windows Einstellungen anpassen', 0.5),
+(1239, 363, 'Neue Rechner hochgetragen', 0.25);
 
 -- --------------------------------------------------------
 
@@ -1519,7 +1687,7 @@ CREATE TABLE IF NOT EXISTS `resets` (
   `time` varchar(4) NOT NULL,
   `comment` varchar(1000) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=62 ;
 
 --
 -- Daten für Tabelle `resets`
@@ -1568,7 +1736,11 @@ INSERT INTO `resets` (`ID`, `userID`, `rack`, `lab`, `pod`, `date`, `time`, `com
 (54, 1, 'F101B', 'SISE2.3', '5', '1527520080', '1', 'Tablet war aus, Frankfurt angerufen'),
 (55, 1, 'F107', 'FPIMPADM 2.0', '1,2,3,4,5,6', '1527535020', '1', 'Filer zeroing dauert sehr lange, UCS Director startet langsam (ggf. services neustarten)'),
 (56, 1, 'F140', 'SAEXS', '8,9,10,11', '1527710400', '0.75', 'HQSWITCH VLAN Problem, nochmal Script ausführen'),
-(57, 1, 'F130', 'IPV6FDv3', '1,2,3', '1527777720', '0.75', '');
+(57, 1, 'F130', 'IPV6FDv3', '1,2,3', '1527777720', '0.75', ''),
+(58, 1, 'F180', 'BGP', '1,2', '1531928700', '0.5', 'Nur Script ausführen auf dehamubuntu'),
+(59, 1, 'F107', 'FPIMPADM 2.0', '1,2,3,4,5,6,7,8', '1532013600', '2', 'Battery Warning kann ignoriert werden.'),
+(60, 1, 'F180', 'MPLST', '2,3,4', '1532111760', '1.5', 'Framerelay Switch Config Fehler manuel verbessert.'),
+(61, 1, 'F180', 'MCAST', '3', '1534146480', '0.5', 'Eine WG umfasst 2 Pods');
 
 -- --------------------------------------------------------
 
