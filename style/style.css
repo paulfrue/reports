@@ -88,11 +88,6 @@ body {
 	background: radial-gradient(ellipse at top, #100040, transparent), radial-gradient(ellipse at bottom, #202020, transparent);
 }
 
-#bg_lenseffect:hover {
-	margin-left: 0px;
-	margin-top: 0px;
-}
-
 #timetable {
 	z-index: 10;
 	position: fixed;
@@ -261,6 +256,40 @@ body {
     background-color: #303030;
 }
 
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.box_table {
+    width: 100%;
+    background-color: #202020;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+td {
+    border: 1px solid #303030;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+tr:first-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+tr:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+tr:hover {
+    background-color: #252525;
+}
+
 #results {
     color: gray;
     font-style: italic;
@@ -422,9 +451,11 @@ body {
     width: calc(100% + 50px);
     height: 22px;
     background-color: #202020;
+    background: radial-gradient(ellipse at top, #505050, transparent);
     margin-bottom: 20px;
 	margin-left: -25px;
-	box-shadow: inset 0px 0px 2px 1px #505050;
+	box-shadow: inset 0px 0px 2px 1px #505050, 0px 2px 2px 0px #101010;
+    border-radius: 15px;
 }
 
 .hr_cw {

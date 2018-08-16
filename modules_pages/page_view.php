@@ -9,7 +9,7 @@ session_start();
         <?php
         include ("modules_remove/remove_report.php");
         
-        include ("modules_layout/layout_filter_reports.php");        
+        include ("modules_layout/layout_filter_reports.php");
         include ("modules_filter/filter_reports.php");
         include ("modules_filter/filter_reports_overtime.php");
         include ("modules_filter/filter_reports_task.php");
@@ -40,7 +40,7 @@ session_start();
         $cw_old = $cw[0];
 		$date_old = date("Y",$date_timestamp[0]);
         
-        echo "<div id=\"results\">".$size."&nbsp;Berichte gefunden.</div><br>";
+        echo "<div id=\"results\">".$size."&nbsp;Berichte gefunden.</div>";
         
 		echo "&nbsp;<hr class=\"view_hr\"><div class=\"hr_cw\" style=\"color: crimson;\">".$date_old."</div></hr><br><br>";
         echo "&nbsp;<hr class=\"view_hr\"><div class=\"hr_cw\">".$cw_old."</div></hr><br><br>";
