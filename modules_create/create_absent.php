@@ -19,15 +19,15 @@ if(!$_POST["absent"]) {
 $reason = $mysqli->real_escape_string($_POST["reason"]);
 
 if($_POST["absent"] == "ill"){
-    $query = "INSERT INTO reports (ID,userID,date,cw,location,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'ill',0,0,0)";
+    $query = "INSERT INTO reports (ID,userID,date,cw,location,shift,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'ill',0,0,0,0)";
     $result = $mysqli->query ($query);
 }
 if($_POST["absent"] == "vacation"){
-    $query = "INSERT INTO reports (ID,userID,date,cw,location,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'vacation',0,0,0)";
+    $query = "INSERT INTO reports (ID,userID,date,cw,location,shift,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'vacation',0,0,0,0)";
     $result = $mysqli->query ($query);
 }
 if($_POST["absent"] == "holiday"){
-    $query = "INSERT INTO reports (ID,userID,date,cw,location,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'holiday',0,0,0)";
+    $query = "INSERT INTO reports (ID,userID,date,cw,location,shift,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'holiday',0,0,0,0)";
     $result = $mysqli->query ($query);
 }
     

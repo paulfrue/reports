@@ -16,5 +16,5 @@ if($_SESSION["role"] == "instructor"){
         }
     }
     echo "</select>&nbsp;<input type=\"submit\" class=\"btn\" value=\"Wechseln\"></form><br>";
-}            
+}
 ?>

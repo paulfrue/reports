@@ -29,6 +29,7 @@ session_start();
                 $date_timestamp[$i] = $row["date"];
                 $cw[$i] = $row["cw"];
                 $location[$i] = $row["location"];
+                $shift[$i] = $row["shift"];
                 $begin[$i] = $row["begin"];
                 $end[$i] = $row["end"];
     
@@ -88,7 +89,7 @@ session_start();
             if($_SESSION["role"] == "apprentice"){
                 echo "<div class=\"table_manage\">";
                 echo "<img src=\"img/delete.svg\" class=\"manage\" title=\"Report Löschen!\" onclick=\"location.href='index.php?remove&reportID=".$ID[$i]."'\"><br>";
-                echo "</div>";   
+                echo "</div>";
             }
             if($location[$i] == "company" or $location[$i] == "school"){
 				if ($total > 8) {
@@ -106,11 +107,24 @@ session_start();
                 echo "<div class=\"table_task\">";
                 switch ($location[$i]){
                     case "company":
+                        if($shift[$i] == "day"){
+                            $colorodd = "#CCE1E8";
+                            $coloreven = "#DCF4FC";
+                        }
+                        if($shift[$i] == "late"){
+                            $colorodd = "#F4F142";
+                            $coloreven = "#D1CF2E";
+                        }
+                        if($shift[$i] == "night"){
+                            $colorodd = "#A1F23E";
+                            $coloreven = "#87CE31";
+                        }
+                        
                         if(($it%2) != 1){
-                            echo "<div class=\"table_action\" style=\"background-color: #CCE1E8;\">".$text[$it]."</div><div class=\"table_time\" style=\"background-color: #CCE1E8;\">".$time[$it]."</div>";
+                            echo "<div class=\"table_action\" style=\"background-color: ".$colorodd.";\">".$text[$it]."</div><div class=\"table_time\" style=\"background-color: ".$colorodd.";\">".$time[$it]."</div>";
                         }
                         else{
-                            echo "<div class=\"table_action\" style=\"background-color: #DCF4FC;\">".$text[$it]."</div><div class=\"table_time\" style=\"background-color: #DCF4FC;\">".$time[$it]."</div>";
+                            echo "<div class=\"table_action\" style=\"background-color: ".$coloreven.";\">".$text[$it]."</div><div class=\"table_time\" style=\"background-color: ".$coloreven.";\">".$time[$it]."</div>";
                         }
                         break;
                     case "school":

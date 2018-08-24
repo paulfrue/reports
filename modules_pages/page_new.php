@@ -34,6 +34,13 @@
             Berufsschule<input type="radio" id="radio2" name="location" value="school">
             <label for="radio2"></label>
             <br><br>
+            Day<input type="radio" id="radio3" name="shift" value="day" checked>
+            <label for="radio3"></label>
+            Late<input type="radio" id="radio4" name="shift" value="late">
+            <label for="radio4"></label>
+            Night<input type="radio" id="radio5" name="shift" value="night">
+            <label for="radio5"></label>
+            <br><br>
             Benutzerdefiniertes Datum:&nbsp;<input type="date" name="customdate">
             <br><br>
             Arbeitsbeginn:&nbsp;<input type="time" name="begin">
@@ -71,12 +78,12 @@
                 <hr>
                 Benutzerdefiniertes Datum:&nbsp;<input type="date" name="customdate">
                 <br><br>
-                Krankheit<input type="radio" id="radio3" name="absent" value="ill">
-                <label for="radio3"></label>
-                Urlaub<input type="radio" id="radio4" name="absent" value="vacation" checked>
-                <label for="radio4"></label>
-                Feiertag<input type="radio" id="radio5" name="absent" value="holiday">
-                <label for="radio5"></label>
+                Krankheit<input type="radio" id="radio6" name="absent" value="ill">
+                <label for="radio6"></label>
+                Urlaub<input type="radio" id="radio7" name="absent" value="vacation" checked>
+                <label for="radio7"></label>
+                Feiertag<input type="radio" id="radio8" name="absent" value="holiday">
+                <label for="radio8"></label>
                 <br><br>
                 Grund:&nbsp;
                 <input type="text" name="reason" style="width: 300px;" placeholder="Bspw. Krankheit, Urlaub, Feiertag">

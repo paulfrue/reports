@@ -16,7 +16,7 @@ $tasks = $_POST["tasks"];
 if((!$_POST["begin"] or !$_POST["end"]) and (!$_POST["817"] and !$_POST["918"])) {
     header("Location: ../index.php?p=1&r=2");
     exit;
-}    
+}
     
 if(empty($_POST["action0"]) or empty($_POST["time0"])) {
     header("Location: ../index.php?p=1&r=1");
@@ -39,12 +39,13 @@ else {
 }
 
 if($_POST["location"] == "company"){
-    $query = "INSERT INTO reports (ID,userID,date,cw,location,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'company',".$begin.",".$end.",0)";
+    $query = "INSERT INTO reports (ID,userID,date,cw,location,shift,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'company','".$_POST["shift"]."',".$begin.",".$end.",0)";
+    $result = $mysqli->query ($query);
 }
 if($_POST["location"] == "school"){
-    $query = "INSERT INTO reports (ID,userID,date,cw,location,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'school',".$begin.",".$end.",0)";
+    $query = "INSERT INTO reports (ID,userID,date,cw,location,shift,begin,end,deleted) VALUES (Null,".$_SESSION["userID"].",".$timestamp.",".$cw.",'school',0,".$begin.",".$end.",0)";
+    $result = $mysqli->query ($query);
 }
-$result = $mysqli->query ($query);
 
 if($result) {
     $query = "SELECT ID FROM reports ORDER BY ID DESC LIMIT 1";
