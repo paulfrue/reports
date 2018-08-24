@@ -150,9 +150,20 @@ session_start();
             echo "<div class=\"table_info\">";
             echo "<div class=\"table_date\">".$date."</div>";
             echo "<div class=\"table_cw\">KW:&nbsp;".$cw[$i]."</div>";
+            
+            if($shift[$i] == "day"){
+                $show_shift = "Tagschicht";
+            }
+            if($shift[$i] == "late"){
+                $show_shift = "Spätschicht";
+            }
+            if($shift[$i] == "night"){
+                $show_shift = "Nachtschicht";
+            }
+            
             switch ($location[$i]){
                 case "company":
-                    echo "<div class=\"table_location\">Im Unternehmen</div>";
+                    echo "<div class=\"table_location\">Im Unternehmen ".$show_shift."</div>";
                     echo "<div class=\"table_worktime\">".$begin[$i]." bis ".$end[$i]." Uhr</div>";
                     break;
                 case "school":
