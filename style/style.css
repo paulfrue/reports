@@ -299,6 +299,26 @@ tr:hover {
     letter-spacing: 2px;
 }
 
+.page_number {
+    position: relative;
+    display: inline;
+    min-width: 15px;
+    height: 15px;
+    background-color: #202020;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.page_number:hover {
+    background-color: #404040;
+}
+
+.page_number_active {
+    background-color: #505050;
+}
+
 .table_wrap {
     position: relative;
     float: left;

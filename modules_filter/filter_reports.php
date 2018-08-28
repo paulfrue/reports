@@ -22,6 +22,12 @@ if($_GET["filter"]){
         case "holiday":
             $query = "SELECT * FROM reports WHERE userID = \"".$_SESSION["userID"]."\" AND deleted = 0 AND location = 'holiday' ORDER BY date DESC";
             break;
+        case "late":
+            $query = "SELECT * FROM reports WHERE userID = \"".$_SESSION["userID"]."\" AND deleted = 0 AND shift = 'late' ORDER BY date DESC";
+            break;
+        case "night":
+            $query = "SELECT * FROM reports WHERE userID = \"".$_SESSION["userID"]."\" AND deleted = 0 AND shift = 'night' ORDER BY date DESC";
+            break;
     }
 }
 ?>

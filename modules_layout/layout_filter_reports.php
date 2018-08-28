@@ -7,14 +7,16 @@
     
     <table class="box_table">
         <td colspan="3">
-            <input type="button" class="btn" value="Alle" onclick="location.href='index.php?filter=all'">
-            <input type="button" class="btn" value="Letzten 5" onclick="location.href='index.php?filter=lastfive'">
-            <input type="button" class="btn" value="Letzten 30" onclick="location.href='index.php?filter=lastthirty'">
-            <input type="button" class="btn" value="Schule" onclick="location.href='index.php?filter=school'">
-            <input type="button" class="btn" value="Krankheit" onclick="location.href='index.php?filter=ill'">
-            <input type="button" class="btn" value="Urlaub" onclick="location.href='index.php?filter=vacation'">
-            <input type="button" class="btn" value="Feiertage" onclick="location.href='index.php?filter=holiday'">
-            <input type="button" class="btn" value="Überstunden" onclick="location.href='index.php?overtime'">
+            <input type="button" class="btn" value="All" onclick="location.href='index.php?filter=all'">
+            <input type="button" class="btn" value="Last 5" onclick="location.href='index.php?filter=lastfive'">
+            <input type="button" class="btn" value="Last 30" onclick="location.href='index.php?filter=lastthirty'">
+            <input type="button" class="btn" value="School" onclick="location.href='index.php?filter=school'">
+            <input type="button" class="btn" value="Illness" onclick="location.href='index.php?filter=ill'">
+            <input type="button" class="btn" value="Vacation" onclick="location.href='index.php?filter=vacation'">
+            <input type="button" class="btn" value="Holiday" onclick="location.href='index.php?filter=holiday'">
+            <input type="button" class="btn" value="Overtime" onclick="location.href='index.php?overtime'">
+            <input type="button" class="btn" value="Late" onclick="location.href='index.php?filter=late'">
+            <input type="button" class="btn" value="Night" onclick="location.href='index.php?filter=night'">
         </td><tr>
         <form method="post" action="index.php?searchtask">
             <td align="right">Tätigkeit:</td>

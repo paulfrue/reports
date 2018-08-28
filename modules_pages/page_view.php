@@ -38,15 +38,45 @@ session_start();
         }
         
         $size = count($ID);
-        $cw_old = $cw[0];
-		$date_old = date("Y",$date_timestamp[0]);
         
-        echo "<div id=\"results\">".$size."&nbsp;Berichte gefunden.</div>";
+        echo "<div id=\"results\">".$size."&nbsp;Berichte gefunden.</div><br>";
+        
+        if($size > 0) {
+        
+        $page_amount = 30;
+        $current_page = $_GET["page"];
+        
+        if($size > $page_amount) {
+            $pages = $size/$page_amount;
+            echo "Seite:";
+            
+            for($x = 1; $pages >= $x-1; $x++) {
+                if($x == $current_page) {
+                    echo "<div class=\"page_number page_number_active\" onclick=\"location.href='index.php?filter=".$_GET["filter"]."&page=".$x."'\">".$x."</div>";
+                }
+                else {
+                    echo "<div class=\"page_number\" onclick=\"location.href='index.php?filter=".$_GET["filter"]."&page=".$x."'\">".$x."</div>";
+                }
+            }
+        }
+            
+        if($current_page > 1) {
+            $page_end = $current_page*$page_amount;
+            $page_start = $page_end-$page_amount;
+        }
+            
+        else {
+            $page_start = 0;
+            $page_end = $page_start+$page_amount;
+        }
+            
+        $cw_old = $cw[$page_start];
+        $date_old = date("Y",$date_timestamp[$page_start]);
         
 		echo "&nbsp;<hr class=\"view_hr\"><div class=\"hr_cw\" style=\"color: crimson;\">".$date_old."</div></hr><br><br>";
         echo "&nbsp;<hr class=\"view_hr\"><div class=\"hr_cw\">".$cw_old."</div></hr><br><br>";
         
-        for($i = 0; $i < $size; $i++) {
+        for($i = $page_start; $i < $page_end and $i < $size; $i++) {
             
 			if($date_old != date("Y",$date_timestamp[$i])) {
 				$date_old = date("Y",$date_timestamp[$i]);
@@ -187,6 +217,8 @@ session_start();
             $total = 0;
             $date  = "";
         }
+        }
+        
         echo "<font color=\"#404040\">.</font></div>";
         ?>
     </div>
