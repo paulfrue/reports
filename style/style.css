@@ -618,6 +618,19 @@ input[type="checkbox"]:checked+label, input[type="radio"]:checked+label{
     color: #606060;
 }
 
+.suggest_box {
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background-color: #505050;
+    color: #000000;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
 .error {
     width: 100%;
     font-style: italic;

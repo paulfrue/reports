@@ -13,7 +13,7 @@ else {
 
 $tasks = $_POST["tasks"];
 
-if((!$_POST["begin"] or !$_POST["end"]) and (!$_POST["817"] and !$_POST["918"])) {
+if((!$_POST["begin"] or !$_POST["end"]) and (!$_POST["817"] and !$_POST["918"] and !$_POST["160"] and !$_POST["128"])) {
     header("Location: ../index.php?p=1&r=2");
     exit;
 }
@@ -30,6 +30,14 @@ if($_POST["817"]) {
 elseif($_POST["918"]) {
     $begin = "9.00";
     $end = "18.00";
+}
+elseif($_POST["160"]) {
+    $begin = "16.00";
+    $end = "0.00";
+}
+elseif($_POST["128"]) {
+    $begin = "0.00";
+    $end = "8.00";
 }
 else {
     $begin = $_POST["begin"].'';

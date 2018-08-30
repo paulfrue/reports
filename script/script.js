@@ -38,6 +38,54 @@ function menu() {
     }
 }
 
+function form_enable_company() {
+    document.getElementById("shift").setAttribute("style", "");
+    document.getElementById("shift_time").setAttribute("style", "");
+}
+
+function form_disable_school() {
+    document.getElementById("shift").setAttribute("style", "display: none;");
+    document.getElementById("shift_time").setAttribute("style", "display: none;");
+}
+
+function form_disable_check() {
+    setTimeout(function() {
+        if (document.getElementById("check1").checked) {
+            document.getElementById("shift_time_custom").setAttribute("style", "display:none;");
+        }
+        else if (document.getElementById("check2").checked) {
+            document.getElementById("shift_time_custom").setAttribute("style", "display:none;");
+        }
+        else if (document.getElementById("check3").checked) {
+            document.getElementById("shift_time_custom").setAttribute("style", "display:none;");
+        }
+        else if (document.getElementById("check4").checked) {
+            document.getElementById("shift_time_custom").setAttribute("style", "display:none;");
+        }
+        else {
+            document.getElementById("shift_time_custom").setAttribute("style", "");
+        }
+    },100);
+}
+
+function suggest(index, value) {
+    $.get("modules_functions/function_suggest.php?value="+value+"", function (data) {
+        document.getElementById("suggest"+index).innerHTML = data;
+    })
+}
+
+function apply_suggest(index) {
+    var text = document.getElementById("suggest"+index).innerHTML;
+    document.getElementById("ajax"+index).value = text;
+    document.getElementById("suggest"+index).innerHTML = "";
+}
+
+function suggest_clear() {
+    for (var i = 0; i <= 20; i++) {
+        document.getElementById("suggest"+i).innerHTML = "";
+    }
+}
+
 function hour_count() {
     var total_hours = 0;
     var hours = document.getElementsByClassName("hours");
@@ -52,41 +100,6 @@ function hour_count() {
 
 function rand(index) {
     $.get("modules_functions/function_random.php", function (data) {
-        switch(index){
-            case 0:
-            document.getElementById("ajax0").setAttribute("value", data);
-                break;
-            case 1:
-            document.getElementById("ajax1").setAttribute("value", data);
-                break;
-            case 2:
-            document.getElementById("ajax2").setAttribute("value", data);
-                break;
-            case 3:
-            document.getElementById("ajax3").setAttribute("value", data);
-                break;
-            case 4:
-            document.getElementById("ajax4").setAttribute("value", data);
-                break;
-            case 5:
-            document.getElementById("ajax5").setAttribute("value", data);
-                break;
-            case 6:
-            document.getElementById("ajax6").setAttribute("value", data);
-                break;
-            case 7:
-            document.getElementById("ajax7").setAttribute("value", data);
-                break;
-            case 8:
-            document.getElementById("ajax8").setAttribute("value", data);
-                break;
-            case 9:
-            document.getElementById("ajax9").setAttribute("value", data);
-                break;
-        }
+        document.getElementById("ajax"+index).setAttribute("value", data);
     })
-}
-
-function text(txt){
-    document.getElementById("ajax0").setAttribute("value", txt);
 }
