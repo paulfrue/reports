@@ -11,7 +11,7 @@ $result = $mysqli->query ($query);
         <div class="box">
         <form method="post" action="modules_create/create_reset.php">
             <h1>Lab Resets eintragen</h1>
-            <hr>
+            
             <?php
             if(isset($_GET["r"])){
                 echo "<div class=\"error\">";
@@ -24,15 +24,14 @@ $result = $mysqli->query ($query);
                 echo "</div>";
             }
             ?>
-            Racknummer:&nbsp;<input type="text" name="rack">&nbsp;
-            Zeitpunkt:&nbsp;<input type="datetime-local" name="date"><br><br>
-            Labname:&nbsp;<input type="text" name="lab">
-            &nbsp;Pod:&nbsp;<input type="text" name="pod">
-            <br><br>
-            Zeitaufwand:&nbsp;<input type="text" name="time" style="width: 50px;">
-            <br><br>
-            Kommentar (opt.):&nbsp;<input type="text" name="comment" style="width: 400px;">
-            <br><br>
+        <table class="box_table">
+            <td>Zeitpunkt:</td><td><input type="datetime-local" name="date"></td><tr>
+            <td>Racknummer:</td><td><input type="text" name="rack"></td><tr>
+            <td>Labname:</td><td><input type="text" name="lab"></td><tr>
+            <td>Pod:</td><td><input type="text" name="pod"></td><tr>
+            <td>Zeitaufwand:</td><td><input type="text" name="time" style="width: 50px;"></td><tr>
+            <td>Kommentar (opt.):</td><td><input type="text" name="comment" style="width: 400px;"></td><tr>
+        </table>
             <input type="submit" class="btn" value="Reset speichern">
         </form>
         </div>

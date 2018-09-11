@@ -11,7 +11,6 @@ $result = $mysqli->query ($query);
         <div class="box">
         <form method="post" action="modules_create/create_glossary.php">
             <h1>Neuer Glossar Eintrag</h1>
-            <hr>
             <?php
             if(isset($_GET["r"])){
                 echo "<div class=\"error\">";
@@ -24,22 +23,26 @@ $result = $mysqli->query ($query);
                 echo "</div>";
             }
             ?>
-            <select name="category">
-                <option value="1">Programmiersprachen</option>
-                <option value="2">Interne Kürzel</option>
-                <option value="3">Kurse</option>
-                <option value="4">Labs</option>
-                <option value="5">Räume</option>
-                <option value="6">Unterrichtsfächer</option>
-                <option value="7">Hardware</option>
-                <option value="8">Software</option>
-                <option value="9">Techniken</option>
-                <option value="10">Protokolle</option>
-                <option value="11">Firmen</option>
-            </select>
-            <br><br>
-            Begriff: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="term" style="width: 400px;"><br><br>
-            Erklärung: <textarea name="description"></textarea><br><br>
+            <table class="box_table">
+                <td>Kategorie:</td>
+                <td>
+                <select name="category">
+                    <option value="1">Programmiersprachen</option>
+                    <option value="2">Interne Kürzel</option>
+                    <option value="3">Kurse</option>
+                    <option value="4">Labs</option>
+                    <option value="5">Räume</option>
+                    <option value="6">Unterrichtsfächer</option>
+                    <option value="7">Hardware</option>
+                    <option value="8">Software</option>
+                    <option value="9">Techniken</option>
+                    <option value="10">Protokolle</option>
+                    <option value="11">Firmen</option>
+                </select>
+                </td><tr>
+                <td>Begriff:</td><td><input type="text" name="term" style="width: 400px;"></td><tr>
+                <td>Erklärung:</td><td><textarea name="description"></textarea></td><tr>
+            </table>
             <input type="submit" class="btn" value="Eintrag speichern">
         </form>
         </div>

@@ -11,7 +11,7 @@ $result = $mysqli->query ($query);
         <div class="box">
         <form method="post" action="modules_create/create_grade.php">
             <h1>Berufsschulnoten eintragen</h1>
-            <hr>
+            
             <?php
             if(isset($_GET["r"])){
                 echo "<div class=\"error\">";
@@ -24,7 +24,10 @@ $result = $mysqli->query ($query);
                 echo "</div>";
             }
             ?>
-            Unterrichtsfach: &nbsp;
+        <table class="box_table">
+            <td>Datum:</td><td><input type="date" name="date"></td><tr>
+            <td>Unterrichtsfach:</td>
+            <td>
             <select name="lesson">
                 <option value="AE-M">AE-M</option>
                 <option value="OGP">OGP</option>
@@ -34,12 +37,11 @@ $result = $mysqli->query ($query);
                 <option value="IT-M">IT-M</option>
                 <option value="SuG">GuS</option>
                 <option value="Projekt01">Projekt01</option>
-            </select>&nbsp;
-            Datum: &nbsp;<input type="date" name="date"><br><br>
-            Thema:&nbsp;<input type="text" name="content" style="width: 400px;">
-            <br><br>
-            Note:&nbsp;<input type="text" name="grade" style="width: 100px;">
-            <br><br>
+            </select>
+            </td><tr>
+            <td>Thema:</td><td><input type="text" name="content" style="width: 400px;"></td><tr>
+            <td>Note:</td><td><input type="text" name="grade" style="width: 100px;"></td><tr>
+        </table>
             <input type="submit" class="btn" value="Note speichern">
         </form>
         </div>

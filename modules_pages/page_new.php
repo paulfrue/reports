@@ -29,17 +29,17 @@
         <form method="post" action="modules_create/create_report.php" autocomplete="off">
             
         <table class="box_table"> 
-            <td style="background-color: #101010;">Datum (opt.):</td>
+            <td>Datum (opt.):</td>
             <td colspan="4">Benutzerdefiniertes Datum:&nbsp;<input type="date" name="customdate"></td><tr>
             
-            <td style="background-color: #101010;">Standort:</td>
+            <td>Standort:</td>
             <td colspan="2">Unternehmen&nbsp;<input type="radio" id="radio1" name="location" value="company" checked>
             <label for="radio1" onclick="form_enable_company();"></label></td>
             <td colspan="2">Berufsschule&nbsp;<input type="radio" id="radio2" name="location" value="school">
             <label for="radio2" onclick="form_disable_school();"></label></td><tr>
             
             <tr id="shift">
-                <td style="background-color: #101010;">Schicht:</td>
+                <td>Schicht:</td>
                 <td  colspan="2">Day&nbsp;<input type="radio" id="radio3" name="shift" value="day" checked>
                 <label for="radio3"></label></td>
                 <td>Late&nbsp;<input type="radio" id="radio4" name="shift" value="late">
@@ -49,7 +49,7 @@
             </tr>
             
             <tr id="shift_time">
-                <td style="background-color: #101010;">Schichtzeiten:</td>
+                <td>Schichtzeiten:</td>
                 <td>08:00-17:00&nbsp;<input type="checkbox" id="check1" name="817">
                 <label for="check1" onclick="form_disable_check()"></label></td>
                 <td>09:00-18:00&nbsp;<input type="checkbox" id="check2" name="918">
@@ -61,7 +61,7 @@
             </tr>
             
             <tr id="shift_time_custom">
-                <td style="background-color: #101010;">Zeiten variabel:</td>
+                <td>Zeiten variabel:</td>
                 <td colspan="2">Arbeitsbeginn:&nbsp;<input type="time" name="begin"></td>
                 <td colspan="2">Feierabend:&nbsp;<input type="time" name="end"></td>
             </tr>
@@ -100,10 +100,10 @@
             <form method="post" action="modules_create/create_absent.php">
                 <h1>Abwesenheit</h1>
                 <table class="box_table">
-                    <td style="background-color: #101010;">Datum (opt.):</td>
+                    <td>Datum (opt.):</td>
                     <td colspan="3">Benutzerdefiniertes Datum:&nbsp;<input type="date" name="customdate"></td><tr>
                     
-                    <td style="background-color: #101010;">Grund:</td>
+                    <td>Grund:</td>
                     <td>Krankheit<input type="radio" id="radio6" name="absent" value="ill">
                     <label for="radio6"></label></td>
                     <td>Urlaub<input type="radio" id="radio7" name="absent" value="vacation" checked>
@@ -111,7 +111,7 @@
                     <td>Feiertag<input type="radio" id="radio8" name="absent" value="holiday">
                     <label for="radio8"></label></td><tr>
                     
-                    <td style="background-color: #101010;">Kommentar:</td>
+                    <td>Kommentar:</td>
                     <td colspan="3"><input type="text" name="reason" style="width: 390px;" placeholder="Bspw. Krankheit, Urlaub, Feiertag"></td><tr>
                 </table>
                 
